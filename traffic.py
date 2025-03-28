@@ -9,18 +9,28 @@ import herepy
 import json
 width=400
 height=250
-def location(place):
-    geocoderApi = herepy.GeocoderApi('fywUFbdwhP7YRn5SZI2A-ZJ7te444T2vt3X5GWnveAE')
-    response = geocoderApi.free_form(place)
-    s=json.loads(str(response))
+# def location(place):
+#     geocoderApi = herepy.GeocoderApi('fywUFbdwhP7YRn5SZI2A-ZJ7te444T2vt3X5GWnveAE')
+#     response = geocoderApi.free_form(place)
+#     s=json.loads(str(response))
 
 
-    lat = s["Response"]["View"][0]["Result"][0]["Location"]["DisplayPosition"]["Latitude"]
-    lng = s["Response"]["View"][0]["Result"][0]["Location"]["DisplayPosition"]["Longitude"]
-    lat="{0:.2f}".format(lat)
-    lng="{0:.2f}".format(lng)
-    return '{'+lat+','+lng+'}'
-d={1:"Big Ben  "+location("Big Ben"), 2:"Gariahat  "+location("Gariahat"),3:"Jadavpur  "+location("Jadavpur"),4:"Times Square  "+location("Times Square"),5:"Rasbehari  "+location("Rasbehari"),6:"Garia  "+location("Garia"),7:"Tollygunge  "+location("Tollygunge"),8:"Chingrihata  "+location("Chingrihata"),9:"Saltlake  "+location("Salt Lake")}
+#     lat = s["Response"]["View"][0]["Result"][0]["Location"]["DisplayPosition"]["Latitude"]
+#     lng = s["Response"]["View"][0]["Result"][0]["Location"]["DisplayPosition"]["Longitude"]
+#     lat="{0:.2f}".format(lat)
+#     lng="{0:.2f}".format(lng)
+#     return '{'+lat+','+lng+'}'
+d = {
+    1: "Big Ben  {51.50, -0.12}",
+    2: "Gariahat  {22.52, 88.37}",
+    3: "Jadavpur  {22.50, 88.36}",
+    4: "Times Square  {40.75, -73.99}",
+    5: "Rasbehari  {22.52, 88.34}",
+    6: "Garia  {22.46, 88.39}",
+    7: "Tollygunge  {22.48, 88.34}",
+    8: "Chingrihata  {22.56, 88.40}",
+    9: "Saltlake  {22.58, 88.42}"
+}
 
 
 
